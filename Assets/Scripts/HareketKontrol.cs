@@ -14,14 +14,14 @@ public class HareketKontrol : MonoBehaviour
 
 
         Rigidbody2D myRigidbody = GetComponent<Rigidbody2D>();
-        myRigidbody.AddForce(new Vector2(3, 5),ForceMode2D.Impulse);
+        myRigidbody.AddForce(new Vector2(2, 5),ForceMode2D.Impulse);
 
 
 
 
 
         //int bombacisayisi = 133;
-        //if (bombacisayisi >= 20 && bombacisayisi <= 30)
+        //if (bombacisayisi > 20 && bombacisayisi <= 30)
         //{
         //    Debug.Log("Bombalandiniz");
         //}
