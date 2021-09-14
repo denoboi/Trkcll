@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GemiKontrol : MonoBehaviour
+public class HareketKontrol : MonoBehaviour
 {
+    [SerializeField]
+    float forceSpeed = 5;
+    
     // Start is called before the first frame update
     void Start()
     {
-       
 
+
+
+        Rigidbody2D myRigidbody = GetComponent<Rigidbody2D>();
+        myRigidbody.AddForce(new Vector2(3, 5),ForceMode2D.Impulse);
 
 
 
