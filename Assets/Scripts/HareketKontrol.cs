@@ -6,37 +6,23 @@ public class HareketKontrol : MonoBehaviour
 {
     [SerializeField]
     float forceSpeed = 5;
-    
+
+   
+    private float colliderLengthHalf;
+    private float colliderWidthHalf;
+
+
     // Start is called before the first frame update
     void Start()
     {
 
-
-
         Rigidbody2D myRigidbody = GetComponent<Rigidbody2D>();
-        myRigidbody.AddForce(new Vector2(2, 5),ForceMode2D.Impulse);
+        myRigidbody.AddForce(new Vector2(2, 5), ForceMode2D.Impulse);
 
+        BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
 
-
-
-
-        //int bombacisayisi = 133;
-        //if (bombacisayisi > 20 && bombacisayisi <= 30)
-        //{
-        //    Debug.Log("Bombalandiniz");
-        //}
-        //else if (bombacisayisi > 30 && bombacisayisi <= 99)
-        //{
-        //    Debug.Log("Fena Bombalandiniz");
-        //}
-        //else if (bombacisayisi > 100 && bombacisayisi != 150)
-        //{
-        //    Debug.Log("Çok fena bombalandiniz");
-        //}
-        //else
-        //{
-        //    Debug.Log("Kazandiniz");
-        //}
+        colliderLengthHalf = boxCollider2D.size.y / 2;
+        colliderWidthHalf = boxCollider2D.size.x / 2;
 
     }
 
@@ -46,8 +32,40 @@ public class HareketKontrol : MonoBehaviour
     }
 
     // Update is called once per frame
+
+
     void Update()
     {
-        
+        Vector3 position = Input.mousePosition;
+        position.z = -Camera.main.transform.position.z;
+        position = Camera.main.ScreenToWorldPoint(position);
+
+        transform.position = position;
+
+        StayOnTheScreen();
+
+    }
+
+    void StayOnTheScreen()
+    {
+        Vector3 position = transform.position;
+        if (position.x - colliderWidthHalf < ScreenCalculator.Sol)
+        {
+            position.x = ScreenCalculator.Sol + colliderWidthHalf;
+        }
+        else if (position.x + colliderWidthHalf > ScreenCalculator.Sag)
+        {
+            position.x = ScreenCalculator.Sag - colliderWidthHalf;
+        }
+        if(position.y - colliderLengthHalf < ScreenCalculator.Asagi)
+        {
+            position.y = ScreenCalculator.Asagi + colliderLengthHalf;
+        }
+        else if(position.y + colliderLengthHalf > ScreenCalculator.Yukari)
+        {
+            position.y = ScreenCalculator.Yukari - colliderLengthHalf;
+        }
+
+        transform.position = position;
     }
 }
