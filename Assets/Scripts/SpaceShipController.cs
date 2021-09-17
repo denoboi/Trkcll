@@ -26,6 +26,10 @@ public class SpaceShipController : MonoBehaviour
         }
 
         transform.position = position;
+
+
+
+
     }
 
 }

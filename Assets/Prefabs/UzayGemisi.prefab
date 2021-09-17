@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 166181049}
   - component: {fileID: 166181050}
   - component: {fileID: 166181053}
+  - component: {fileID: 1990201933}
   m_Layer: 0
   m_Name: UzayGemisi
   m_TagString: Untagged
@@ -137,7 +138,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3732360466263489971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eeab1b64f87a88d468e3134e376f5c09, type: 3}
   m_Name: 
@@ -149,9 +150,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3732360466263489971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb8eea79306fc534ea787f04d8661770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   forceSpeed: 5
+--- !u!114 &1990201933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732360466263489971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc769b7e7f6363944809429dea46a4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

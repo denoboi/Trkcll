@@ -17,7 +17,7 @@ public class HareketKontrol : MonoBehaviour
     {
 
         Rigidbody2D myRigidbody = GetComponent<Rigidbody2D>();
-        myRigidbody.AddForce(new Vector2(2, 5), ForceMode2D.Impulse);
+        myRigidbody.AddForce(new Vector2(Random.Range(2, 5), Random.Range(1,5)), ForceMode2D.Impulse);
 
         BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
 
@@ -36,11 +36,11 @@ public class HareketKontrol : MonoBehaviour
 
     void Update()
     {
-        Vector3 position = Input.mousePosition;
-        position.z = -Camera.main.transform.position.z;
-        position = Camera.main.ScreenToWorldPoint(position);
+        //Vector3 position = Input.mousePosition;
+        //position.z = -Camera.main.transform.position.z;
+        //position = Camera.main.ScreenToWorldPoint(position);
 
-        transform.position = position;
+        //transform.position = position;
 
         StayOnTheScreen();
 

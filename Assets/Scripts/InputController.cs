@@ -5,25 +5,23 @@ using UnityEngine;
 public class InputController : MonoBehaviour
 {
     [SerializeField]
-    GameObject asteroidPrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    GameObject asteroidPrefabs;
+    GameObject[] asteroids = new GameObject[4];
+   
     void Update()
     {
       if(Input.GetMouseButtonDown(0))
-        {
+      {
             Debug.Log(Input.mousePosition);
 
             Vector3 position = Input.mousePosition;
             position.z = -Camera.main.transform.position.z;
             position = Camera.main.ScreenToWorldPoint(position);
 
-            Instantiate(asteroidPrefab, position, Quaternion.identity);
-        }
+            asteroids[1] = Instantiate(asteroidPrefabs, position, Quaternion.identity);
+            asteroids[0] = Instantiate(asteroidPrefabs, position, Quaternion.identity);
+            asteroids[2] = Instantiate(asteroidPrefabs, position, Quaternion.identity);
+            asteroids[3] = Instantiate(asteroidPrefabs, position, Quaternion.identity);
+      }
     }
 }
