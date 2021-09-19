@@ -7,6 +7,8 @@ public class InputController : MonoBehaviour
     [SerializeField]
     GameObject asteroidPrefabs;
     GameObject[] asteroids = new GameObject[4];
+
+    List<GameObject> asteroidList = new List<GameObject>();
    
     void Update()
     {
@@ -18,10 +20,22 @@ public class InputController : MonoBehaviour
             position.z = -Camera.main.transform.position.z;
             position = Camera.main.ScreenToWorldPoint(position);
 
-            asteroids[1] = Instantiate(asteroidPrefabs, position, Quaternion.identity);
-            asteroids[0] = Instantiate(asteroidPrefabs, position, Quaternion.identity);
-            asteroids[2] = Instantiate(asteroidPrefabs, position, Quaternion.identity);
-            asteroids[3] = Instantiate(asteroidPrefabs, position, Quaternion.identity);
+            for (int i = 0; i < 20; i++)
+            {
+                asteroidList.Add(Instantiate(asteroidPrefabs, position, Quaternion.identity));
+            }
+
+            
       }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            for(int i = 0; i< asteroidList.Count; i++)
+            {
+                Destroy(asteroidList[i]);
+            }
+        }
     }
+
+   
 }
