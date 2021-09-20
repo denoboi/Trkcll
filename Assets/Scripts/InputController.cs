@@ -14,8 +14,7 @@ public class InputController : MonoBehaviour
     {
       if(Input.GetMouseButtonDown(0))
       {
-            Debug.Log(Input.mousePosition);
-
+            
             Vector3 position = Input.mousePosition;
             position.z = -Camera.main.transform.position.z;
             position = Camera.main.ScreenToWorldPoint(position);
