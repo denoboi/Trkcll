@@ -20,6 +20,7 @@ public class InputController : MonoBehaviour
             position.z = -Camera.main.transform.position.z;
             position = Camera.main.ScreenToWorldPoint(position);
 
+            //burada kendimiz kosulu veriyoruz, 20 olana kadar 1'er kez instantiate edecegiz.
             for (int i = 0; i < 20; i++)
             {
                 asteroidList.Add(Instantiate(asteroidPrefabs, position, Quaternion.identity));
@@ -30,10 +31,20 @@ public class InputController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            for(int i = 0; i< asteroidList.Count; i++)
+            Debug.Log(asteroidList.Count);
+
+            foreach(GameObject asteroid in asteroidList)
             {
-                Destroy(asteroidList[i]);
+                Destroy(asteroid);
             }
+
+            asteroidList.Clear();
+
+            // burada bilmiyoruz sayisini ve listeye biraktik hesap yapmayi. cunku kullanicinin kac kez sol tiklayip asteroid olusturdugunu bilmiyoruz. Sag tikladigimizda hepsini yok ediyor.
+            //for(int i = 0; i< asteroidList.Count; i++)
+            //{
+            //    Destroy(asteroidList[i]);
+            //}
         }
     }
 
