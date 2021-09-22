@@ -20,7 +20,7 @@ public class Asteroid : MonoBehaviour
         }else
         {
             //sag asagi yonde random bir guc uygular
-            rb2d.AddForce(new Vector2(Random.Range(2.5f, -1f), Random.Range(2.5f, -1f)) * speed, ForceMode2D.Impulse);
+            rb2d.AddForce(new Vector2(Random.Range(1f, 2.5f), Random.Range(-2.5f, -1f)) * speed, ForceMode2D.Impulse);
         }         
        
     }
