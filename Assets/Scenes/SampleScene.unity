@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 519420039}
   - component: {fileID: 519420041}
   - component: {fileID: 519420042}
+  - component: {fileID: 519420044}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -382,72 +383,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499e29fe27cb7cb4983b1277173b545b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &665247714
-PrefabInstance:
+--- !u!114 &519420044
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3732360466263489971, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_Name
-      value: UzayGemisi
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732360466263489981, guid: d206872207874284d9e5641314101a1b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d206872207874284d9e5641314101a1b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2802187828a2c934b90c9069a0e58d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spaceShipPrefab: {fileID: 3732360466263489971, guid: d206872207874284d9e5641314101a1b,
+    type: 3}

@@ -47,4 +47,16 @@ public class SpaceShip
     }
     #endregion
 
+    public void SuperSpeed()
+    {
+        maxSpeed += Random.Range(10, 30);
+        Debug.Log(maxSpeed);
+    }
+
+    public void SlowDowner()
+    {
+        maxSpeed -= Random.Range(10, 30);
+        Debug.Log(maxSpeed);
+    }
+
 }
