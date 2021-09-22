@@ -189,7 +189,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.544313
+  orthographic size: 9.382495
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -268,10 +268,11 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -5.72, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: 15.891, y: -9.384796}
+  - {x: 15.891, y: 0.41811252}
   - {x: 15.891, y: 9.499008}
 --- !u!68 &519420036
 EdgeCollider2D:
@@ -286,7 +287,7 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 5.66, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: -15.891, y: 9.46}

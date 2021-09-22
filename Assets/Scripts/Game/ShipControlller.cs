@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ShipControlller : MonoBehaviour
 {
+    [SerializeField]
+    GameObject bulletPrefab;
+
     const float moveSpeed = 10;
 
     // Start is called before the first frame update
@@ -33,5 +36,12 @@ public class ShipControlller : MonoBehaviour
         }
 
         transform.position = position;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        }
     }
+
+    
 }
