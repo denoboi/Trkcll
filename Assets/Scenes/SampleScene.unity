@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
   - component: {fileID: 519420036}
+  - component: {fileID: 519420043}
   - component: {fileID: 519420037}
   - component: {fileID: 519420040}
   - component: {fileID: 519420038}
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eeab1b64f87a88d468e3134e376f5c09, type: 3}
   m_Name: 
@@ -362,13 +363,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f744ca9433f0bc45a6e1b731928f542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 2966085943740082769, guid: 88b7a2d0bb4bc4e4982893aa759c4729,
     type: 3}
+--- !u!114 &519420043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499e29fe27cb7cb4983b1277173b545b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &665247714
 PrefabInstance:
   m_ObjectHideFlags: 0
