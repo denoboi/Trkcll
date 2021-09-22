@@ -397,3 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spaceShipPrefab: {fileID: 3732360466263489971, guid: d206872207874284d9e5641314101a1b,
     type: 3}
+  asteroidPrefabs:
+  - {fileID: 2966085943740082769, guid: 88b7a2d0bb4bc4e4982893aa759c4729, type: 3}
+  - {fileID: 7539217946697063855, guid: 7c1c817f06d8833418897a629b4bc862, type: 3}
+  - {fileID: 6326080926931225841, guid: 355389e19e461c847b7f99bcf12863ed, type: 3}
