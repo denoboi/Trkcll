@@ -6,11 +6,17 @@ public class PatlamaYokEdici : MonoBehaviour
 {
     
     CountDownTimer patlamaCountdownTimer;
+
+    SiraliYokEdici siraliYokEdici;
     void Start()
     {
+
+
         patlamaCountdownTimer = gameObject.AddComponent<CountDownTimer>();
         patlamaCountdownTimer.TotalTime = 0.9f;
         patlamaCountdownTimer.Run();
+
+        siraliYokEdici = Camera.main.GetComponent<SiraliYokEdici>();
                    
     }
 
@@ -19,6 +25,7 @@ public class PatlamaYokEdici : MonoBehaviour
     {
         if (patlamaCountdownTimer.Over)
         {
+            siraliYokEdici.DestroyTarget();
             Destroy(gameObject);
         }
     }

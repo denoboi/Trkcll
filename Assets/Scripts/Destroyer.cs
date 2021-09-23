@@ -13,8 +13,7 @@ public class Destroyer : MonoBehaviour
     {
 
         destroyerCountdownTimer = gameObject.AddComponent<CountDownTimer>();
-        destroyerCountdownTimer.TotalTime = Random.Range(3, 10);
-        destroyerCountdownTimer.Run();
+       
     }
 
     // Update is called once per frame
@@ -29,5 +28,11 @@ public class Destroyer : MonoBehaviour
             
 
         }
+    }
+
+    public void AsteroidDestroyer(float sure)
+    {
+        destroyerCountdownTimer.TotalTime = Random.Range(1, 5);
+        destroyerCountdownTimer.Run();
     }
 }
