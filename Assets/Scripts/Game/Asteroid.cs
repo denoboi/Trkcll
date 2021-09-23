@@ -19,10 +19,12 @@ public class Asteroid : MonoBehaviour
         {
             //sol asagi yonde random bir guc uygular
             rb2d.AddForce(new Vector2(Random.Range(-2.5f, -1f), Random.Range(-2.5f, -1f)) * speed, ForceMode2D.Impulse);
+            rb2d.AddTorque(yon * 25f);
         }else
         {
             //sag asagi yonde random bir guc uygular
             rb2d.AddForce(new Vector2(Random.Range(1f, 2.5f), Random.Range(-2.5f, -1f)) * speed, ForceMode2D.Impulse);
+            rb2d.AddTorque(-yon * 25f);
         }         
        
     }
@@ -35,7 +37,7 @@ public class Asteroid : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        if(gameObject.tag == "Bullet")
         {
             Instantiate(destroyPrefab, gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);

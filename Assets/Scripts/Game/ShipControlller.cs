@@ -5,7 +5,10 @@ using UnityEngine;
 public class ShipControlller : MonoBehaviour
 {
     [SerializeField]
-    GameObject bulletPrefab;
+    GameObject bulletPrefab = default;
+
+    [SerializeField]
+    GameObject explosionPrefab = default;
 
     const float moveSpeed = 10;
 
@@ -46,5 +49,15 @@ public class ShipControlller : MonoBehaviour
         }
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Asteroid")
+        {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            
+        }
+    }
+
+
 }
