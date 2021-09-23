@@ -39,7 +39,11 @@ public class ShipControlller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Vector3 bulletPos = transform.position;
+            //Instantiate methodu Vector3 alip sadece transform.position aldigi icin pozisyonu mecburen referans almaliydik baska turlu olmuyor
+            
+            Instantiate(bulletPrefab, bulletPos, Quaternion.identity);
+            bulletPos.y += 2f;
         }
     }
 
