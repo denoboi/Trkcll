@@ -5,6 +5,8 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
     float speed = 2;
+    [SerializeField]
+    GameObject destroyPrefab;
 
     
     void Start()
@@ -28,6 +30,19 @@ public class Asteroid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Bullet")
+        {
+            Instantiate(destroyPrefab, gameObject.transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            Debug.Log("hit");
+            
+        }
+
         
     }
 }

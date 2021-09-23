@@ -41,9 +41,8 @@ public class ShipControlller : MonoBehaviour
         {
             Vector3 bulletPos = transform.position;
             //Instantiate methodu Vector3 alip sadece transform.position aldigi icin pozisyonu mecburen referans almaliydik baska turlu olmuyor
-            
+            bulletPos.y += 1f;
             Instantiate(bulletPrefab, bulletPos, Quaternion.identity);
-            bulletPos.y += 2f;
         }
     }
 
