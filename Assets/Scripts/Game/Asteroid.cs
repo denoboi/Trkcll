@@ -8,9 +8,13 @@ public class Asteroid : MonoBehaviour
     [SerializeField]
     GameObject destroyPrefab;
 
+    GameManager gameManager;
+
     
     void Start()
     {
+        gameManager = Camera.main.GetComponent<GameManager>();
+
         Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
 
         float yon = Random.Range(0f, 1f);
@@ -37,14 +41,12 @@ public class Asteroid : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(gameObject.tag == "Bullet")
+        if(collision.gameObject.tag == "Bullet")
         {
+            gameManager.AsteroidDestroyed(gameObject);
             Instantiate(destroyPrefab, gameObject.transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            Debug.Log("hit");
-            
+            Destroy(gameObject);      
         }
-
-        
     }
+   
 }

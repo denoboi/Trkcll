@@ -13,6 +13,13 @@ public class GameManager : MonoBehaviour
 
     List<GameObject> asteroidList = new List<GameObject>();
 
+    [SerializeField]
+    int difficulty = 1;
+
+    [SerializeField]
+    int difficultyMultiplier = 2;
+
+
     void Start()
     {
         spaceShip = Instantiate(spaceShipPrefab);
@@ -43,5 +50,16 @@ public class GameManager : MonoBehaviour
             //Simdi de onlari yukarida ikinci olusturdugum listeye ekleyecegim ki yok olmamis asteroidlerin tam sayisini ogreneyim
             asteroidList.Add(asteroid);
         }
+    }
+
+    public void AsteroidDestroyed(GameObject asteroid)
+    {
+        asteroidList.Remove(asteroid);
+        if(asteroidList.Count <= difficulty)
+        {
+            difficulty++;
+            SpawnAsteroid(difficulty * difficultyMultiplier);
+        }
+
     }
 }

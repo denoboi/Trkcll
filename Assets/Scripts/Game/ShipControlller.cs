@@ -10,7 +10,7 @@ public class ShipControlller : MonoBehaviour
     [SerializeField]
     GameObject explosionPrefab = default;
 
-    const float moveSpeed = 10;
+    const float moveSpeed = 15;
 
     // Start is called before the first frame update
     void Start()
