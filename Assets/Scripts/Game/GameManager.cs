@@ -19,14 +19,21 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     int difficultyMultiplier = 2;
 
+    UIController uiController;
+
 
     void Start()
     {
+        uiController = GetComponent<UIController>();
+    }
+
+    public void StartGame()
+    {
+        uiController.GameStarted();
         spaceShip = Instantiate(spaceShipPrefab);
         spaceShip.transform.position = new Vector3(0, ScreenCalculator.Asagi + 1.5f);
         SpawnAsteroid(5);
     }
-
     
     void Update()
     {
