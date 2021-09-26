@@ -27,18 +27,25 @@ public class UIController : MonoBehaviour
 
     public void GameStarted()
     {
+        points = 0;
         gameNameText.gameObject.SetActive(false);
         playButton.gameObject.SetActive(false);
         pointsText.gameObject.SetActive(true);
+        gameOverText.gameObject.SetActive(false);
         UpdateScore();
     }
 
     public void UpdateScore()
     {
-        pointsText.text = "Score: " + points;
-        
+        pointsText.text = "Score: " + points;   
     }
 
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        playButton.gameObject.SetActive(true);
+        
+    }
     /// <summary>
     /// Asteroidleri yok ettikce score artacak
     /// </summary>

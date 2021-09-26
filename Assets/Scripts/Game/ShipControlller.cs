@@ -12,10 +12,14 @@ public class ShipControlller : MonoBehaviour
 
     const float moveSpeed = 15;
 
+    UIController uiController;
+    GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        uiController = Camera.main.GetComponent<UIController>();
+        gameManager = Camera.main.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -55,7 +59,8 @@ public class ShipControlller : MonoBehaviour
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            
+            uiController.GameOver();
+            gameManager.GameOver();
         }
     }
 

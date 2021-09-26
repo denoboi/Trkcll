@@ -36,22 +36,20 @@ public class Asteroid : MonoBehaviour
        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Bullet")
         {
             gameManager.AsteroidDestroyed(gameObject);
-            Instantiate(destroyPrefab, gameObject.transform.position, Quaternion.identity);
-            Destroy(gameObject);
-
-            
+            AsteroidYokEt();
         }
+    }
+
+    public void AsteroidYokEt()
+    {
+        Instantiate(destroyPrefab, gameObject.transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
    
 }

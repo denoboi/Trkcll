@@ -71,4 +71,15 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    public void GameOver()
+    {
+        foreach (GameObject asteroid in asteroidList)
+        {
+            asteroid.GetComponent<Asteroid>().AsteroidYokEt();
+        }
+        asteroidList.Clear();
+        difficulty = 1;
+    }
+
+    
 }
