@@ -222,6 +222,7 @@ MonoBehaviour:
   asteroidDestroySound: {fileID: 8300000, guid: dac043007815a93439d62321f31ea91f,
     type: 3}
   shipDestroySound: {fileID: 8300000, guid: fdc3f9952c3c9594e9fd33d44b8c7f47, type: 3}
+  shipDestroySound2: {fileID: 8300000, guid: e5402f841dfdfdf49afac4a5bb8c03ac, type: 3}
   bulletSound: {fileID: 8300000, guid: a60cb9b1d735d9544ac51979a57cb23d, type: 3}
 --- !u!82 &175572048
 AudioSource:
@@ -721,7 +722,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2cae410275544e1459c0a658029e8b9f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.369
+  m_Volume: 0.099
   m_Pitch: 1
   Loop: 0
   Mute: 0
