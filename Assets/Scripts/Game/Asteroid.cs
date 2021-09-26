@@ -43,6 +43,7 @@ public class Asteroid : MonoBehaviour
         {
             gameManager.AsteroidDestroyed(gameObject);
             AsteroidYokEt();
+            GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundControl>().AsteroidDestroySound();
         }
     }
 

@@ -46,10 +46,12 @@ public class ShipControlller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            
             Vector3 bulletPos = transform.position;
             //Instantiate methodu Vector3 alip sadece transform.position aldigi icin pozisyonu mecburen referans almaliydik baska turlu olmuyor
             bulletPos.y += 1f;
             Instantiate(bulletPrefab, bulletPos, Quaternion.identity);
+            GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundControl>().FireSound();
         }
     }
 
@@ -61,8 +63,10 @@ public class ShipControlller : MonoBehaviour
             Destroy(gameObject);
             uiController.GameOver();
             gameManager.GameOver();
+            GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundControl>().ShipDestroySound();
         }
     }
 
 
 }
+
