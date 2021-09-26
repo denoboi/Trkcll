@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 166181050}
   - component: {fileID: 166181053}
   - component: {fileID: 1990201933}
+  - component: {fileID: 142479617}
   m_Layer: 0
   m_Name: UzayGemisi
   m_TagString: Player
@@ -163,8 +164,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3732360466263489971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc769b7e7f6363944809429dea46a4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &142479617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732360466263489971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c754a804b2880469d757e173aa8c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2463460798226537999, guid: 281ef91a9b37760489eda76f6f8951c8,
+    type: 3}
+  explosionPrefab: {fileID: 2285529792355935417, guid: c8c75f3c582043d4b9138203f9955f51,
+    type: 3}

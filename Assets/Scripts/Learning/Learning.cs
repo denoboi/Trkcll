@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Learning : MonoBehaviour
 {
-  
-
     void Start()
     {
         //constructor 2. olan aslinda
         SpaceShip ship1 = new SpaceShip(Random.Range(80, 100), "Red");
         SpaceShip ship2 = new SpaceShip(Random.Range(80, 100));
+
+        ship1.SuperSpeed();
+        ship2.SuperSpeed();
+
+        ship1.SlowDowner();
+        ship2.SlowDowner();
 
         if (ship1.MaxSpeed > ship2.MaxSpeed)
         {
@@ -46,14 +50,5 @@ public class Learning : MonoBehaviour
         //    Debug.Log("saldiran dusman sayisi: " + attackingEnemy);
         //}
         //while (attackContinues);
-
-    }
-
-       
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
