@@ -10,9 +10,12 @@ public class Asteroid : MonoBehaviour
 
     GameManager gameManager;
 
+    UIController uiControl;
+
     
     void Start()
     {
+        uiControl = Camera.main.GetComponent<UIController>();
         gameManager = Camera.main.GetComponent<GameManager>();
 
         Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
@@ -45,7 +48,9 @@ public class Asteroid : MonoBehaviour
         {
             gameManager.AsteroidDestroyed(gameObject);
             Instantiate(destroyPrefab, gameObject.transform.position, Quaternion.identity);
-            Destroy(gameObject);      
+            Destroy(gameObject);
+
+            
         }
     }
    

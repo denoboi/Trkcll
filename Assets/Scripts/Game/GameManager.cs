@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         spaceShip = Instantiate(spaceShipPrefab);
         spaceShip.transform.position = new Vector3(0, ScreenCalculator.Asagi + 1.5f);
         SpawnAsteroid(5);
+        
     }
     
     void Update()
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void AsteroidDestroyed(GameObject asteroid)
     {
+        uiController.AsteroidDestroyed(asteroid); 
         asteroidList.Remove(asteroid);
         if(asteroidList.Count <= difficulty)
         {
