@@ -23,12 +23,7 @@ public class SoundControl : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+   
     public void AsteroidDestroySound()
     {
         audioSource.PlayOneShot(asteroidDestroySound, 0.8f);
