@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 166181053}
   - component: {fileID: 1990201933}
   - component: {fileID: 142479617}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: UzayGemisi
   m_TagString: Player
   m_Icon: {fileID: 0}

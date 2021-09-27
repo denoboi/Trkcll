@@ -36,6 +36,15 @@ public class Asteroid : MonoBehaviour
        
     }
 
+    private void Update()
+    {
+        if (gameObject.transform.position.y <= -14)
+        {
+            gameManager.AsteroidDestroyed(gameObject);
+            AsteroidYokEt();
+        }
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -51,6 +60,7 @@ public class Asteroid : MonoBehaviour
     {
         Instantiate(destroyPrefab, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
+        
     }
    
 }
