@@ -15,6 +15,9 @@ public class ShipControlller : MonoBehaviour
     UIController uiController;
     GameManager gameManager;
 
+    float horizontalControl;
+    float verticalControl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +28,23 @@ public class ShipControlller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalControl = Input.GetAxis("Horizontal");
-        float verticalControl = Input.GetAxis("Vertical");
+        horizontalControl = Input.GetAxis("Horizontal");
+        verticalControl = Input.GetAxis("Vertical");
 
+       
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            
+            Vector3 bulletPos = transform.position;
+            //Instantiate methodu Vector3 alip sadece transform.position aldigi icin pozisyonu mecburen referans almaliydik baska turlu olmuyor
+            bulletPos.y += 1f;
+            Instantiate(bulletPrefab, bulletPos, Quaternion.identity);
+            GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundControl>().FireSound();
+        }
+    }
+
+    private void FixedUpdate()
+    {
         Vector3 position = transform.position;
 
         if (horizontalControl != 0)
@@ -44,15 +61,6 @@ public class ShipControlller : MonoBehaviour
 
         transform.position = position;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            Vector3 bulletPos = transform.position;
-            //Instantiate methodu Vector3 alip sadece transform.position aldigi icin pozisyonu mecburen referans almaliydik baska turlu olmuyor
-            bulletPos.y += 1f;
-            Instantiate(bulletPrefab, bulletPos, Quaternion.identity);
-            GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundControl>().FireSound();
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

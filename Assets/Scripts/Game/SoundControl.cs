@@ -31,7 +31,7 @@ public class SoundControl : MonoBehaviour
 
     public void ShipDestroySound()
     {
-        audioSource.PlayOneShot(shipDestroySound, 2.5f);
+        audioSource.PlayOneShot(shipDestroySound, 0.5f);
         audioSource.PlayOneShot(shipDestroySound2, 0.3f);
     }
 
